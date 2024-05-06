@@ -16,6 +16,19 @@ namespace SuperShopManagementSystemWindowsApplication
         public FormLogin()
         {
             InitializeComponent();
+            this.txtPassword.UseSystemPasswordChar = true;
+
+        }
+        private void chkBoxShowPassword_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (this.chkBoxShowPassword.Checked)
+            {
+                this.txtPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                this.txtPassword.UseSystemPasswordChar = true;
+            }
         }
     }
 }
